@@ -1,23 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './views/app';
 import reportWebVitals from './reportWebVitals';
-import { ConnectedRouter } from 'react-router-redux';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import configureStore from './store';
 
-
+const store = configureStore();
 const rootElement = document.getElementById('root');
-
 ReactDOM.render(
-  <ConnectedRouter>
-    <div>
-      <h1>
-        Hola Mundo
-      </h1>
-    </div>
-  </ConnectedRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <div>
+        <App />
+      </div>
+    </BrowserRouter>
+  </Provider>,
   rootElement
 );
 
