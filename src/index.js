@@ -3,12 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ConnectedRouter } from 'react-router-redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+
+
+const rootElement = document.getElementById('root');
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <ConnectedRouter>
+    <div>
+      <h1>
+        Hola Mundo
+      </h1>
+    </div>
+  </ConnectedRouter>,
+  rootElement
 );
 
 // If you want to start measuring performance in your app, pass a function
