@@ -1,4 +1,4 @@
-import firebase from 'firebase/compat';
+import firebase from 'firebase/compat/app';
 import { firebaseAuth } from '../firebase';
 import { INIT_AUTH, SIGN_IN_ERROR, SIGN_IN_SUCCESS, SIGN_OUT_SUCCESS } from './actions-type';
 
@@ -42,6 +42,7 @@ export function signOutSuccess() {
 
 export function signInWithGithub() {
   return authenticate(new firebase.auth.GithubAuthProvider());
+  // return authenticate(new firebase.auth.GithubAuthProvider());
 }
 export function signInWithGoogle() {
   return authenticate(new firebase.auth.GoogleAuthProvider());

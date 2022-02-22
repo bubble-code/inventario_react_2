@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 
-export function isAuthenticated(state) {
+export function isAuthenticated(state) { 
   return getAuth(state).authenticated;
 }
 
