@@ -1,11 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { authActions } from 'src/auth';
-import Button from 'src/views/components/button';
+import Button from '../../components/button';
 
-import './sign-in-page.css';
+// import './sign-in-page.css';
 
 
 const SignInPage = ({signInWithGithub, signInWithGoogle, signInWithTwitter}) => {
@@ -21,26 +17,21 @@ const SignInPage = ({signInWithGithub, signInWithGoogle, signInWithTwitter}) => 
   );
 };
 
-SignInPage.propTypes = {
-  signInWithGithub: PropTypes.func.isRequired,
-  signInWithGoogle: PropTypes.func.isRequired,
-  signInWithTwitter: PropTypes.func.isRequired
-};
+// SignInPage.propTypes = {
+//   signInWithGithub: PropTypes.func.isRequired,
+//   signInWithGoogle: PropTypes.func.isRequired,
+//   signInWithTwitter: PropTypes.func.isRequired
+// };
 
 
 //=====================================
 //  CONNECT
 //-------------------------------------
 
-const mapDispatchToProps = {
-  signInWithGithub: authActions.signInWithGithub,
-  signInWithGoogle: authActions.signInWithGoogle,
-  signInWithTwitter: authActions.signInWithTwitter
-};
+// const mapDispatchToProps = {
+//   signInWithGithub: authActions.signInWithGithub,
+//   signInWithGoogle: authActions.signInWithGoogle,
+//   signInWithTwitter: authActions.signInWithTwitter
+// };
 
-export default withRouter(
-  connect(
-    null,
-    mapDispatchToProps
-  )(SignInPage)
-);
+export default SignInPage;

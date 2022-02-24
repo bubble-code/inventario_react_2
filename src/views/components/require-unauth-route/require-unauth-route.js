@@ -1,22 +1,15 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 
-const RequireUnauthRoute = ({component: Component, authenticated, ...rest}) => (
-  <Route
-    {...rest}
-    render={props => {
-      return authenticated ? (
-        <Redirect to={{
-          pathname: '/',
-          state: {from: props.location}
-        }}/>
-      ) : (
-        <h1 {...props}>no login</h1>
-      )
-    }}
-  />
-);
+const RequireUnauthRoute = ({ authenticated, component, ...props }) => {
+  const navigate = useNavigate(); 
+  return (
+    authenticated ? navigate('/') : <component {...props} />
+  )
 
-
+};
 export default RequireUnauthRoute;
+
+//, state: { from: props.location }
