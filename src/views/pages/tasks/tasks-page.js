@@ -13,20 +13,7 @@ import TaskList from '../../components/task-list';
 
 
 export class TasksPage extends Component {
-  static propTypes = {
-    createTask: PropTypes.func.isRequired,
-    dismissNotification: PropTypes.func.isRequired,
-    filterTasks: PropTypes.func.isRequired,
-    filterType: PropTypes.string.isRequired,
-    loadTasks: PropTypes.func.isRequired,
-    location: PropTypes.object.isRequired,
-    notification: PropTypes.object.isRequired,
-    removeTask: PropTypes.func.isRequired,
-    tasks: PropTypes.instanceOf(List).isRequired,
-    undeleteTask: PropTypes.func.isRequired,
-    unloadTasks: PropTypes.func.isRequired,
-    updateTask: PropTypes.func.isRequired
-  };
+
 
   componentWillMount() {
     this.props.loadTasks();

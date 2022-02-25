@@ -1,9 +1,6 @@
 import React from 'react';
 import Button from '../../components/button';
 
-// import './sign-in-page.css';
-
-
 const SignInPage = ({signInWithGithub, signInWithGoogle, signInWithTwitter}) => {
   return (
     <div className="g-row sign-in">
@@ -16,22 +13,5 @@ const SignInPage = ({signInWithGithub, signInWithGoogle, signInWithTwitter}) => 
     </div>
   );
 };
-
-// SignInPage.propTypes = {
-//   signInWithGithub: PropTypes.func.isRequired,
-//   signInWithGoogle: PropTypes.func.isRequired,
-//   signInWithTwitter: PropTypes.func.isRequired
-// };
-
-
-//=====================================
-//  CONNECT
-//-------------------------------------
-
-// const mapDispatchToProps = {
-//   signInWithGithub: authActions.signInWithGithub,
-//   signInWithGoogle: authActions.signInWithGoogle,
-//   signInWithTwitter: authActions.signInWithTwitter
-// };
 
 export default SignInPage;

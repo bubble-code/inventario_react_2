@@ -6,7 +6,8 @@ import './header.css';
 //onClick={signOut}
 //{authenticated ? <li><Button >Sign out</Button></li> : null}
 
-const Header = () => (
+const Header = () => {
+  return(
   <header className="header">
     <div className="g-row">
       <div className="g-col">
@@ -22,7 +23,7 @@ const Header = () => (
       </div>
     </div>
   </header>
-);
+);}
 
 // Header.propTypes = {
 //   authenticated: PropTypes.bool.isRequired,
