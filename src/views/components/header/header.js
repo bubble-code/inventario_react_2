@@ -1,34 +1,26 @@
 import React from 'react';
-import GitHubLogo from '../github-logo';
+import { Navbar, Button, NavbarHeading, NavbarGroup,Classes, Colors, } from '@blueprintjs/core';
+import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 
-import './header.css';
 
 //onClick={signOut}
 //{authenticated ? <li><Button >Sign out</Button></li> : null}
 
 const Header = () => {
-  return(
-  <header className="header">
-    <div className="g-row">
-      <div className="g-col">
-        <h1 className="header__title">Herramienta de Soporte</h1>
-        <ul className="header__actions">
-          {/* {authenticated ? <li><Button >Sign out</Button></li> : null} */}
-          <li>
-            <a className="link link--github" href="https://github.com/r-park/todo-react-redux">
-              <GitHubLogo />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </header>
-);}
-
-// Header.propTypes = {
-//   authenticated: PropTypes.bool.isRequired,
-//   signOut: PropTypes.func.isRequired
-// };
+  return (
+    <Navbar  style={{background:"#1F4B99"}}>
+      <NavbarGroup style={{color:"white"}}>
+        <NavbarHeading>
+          Tools Bookkeeper and Components
+        </NavbarHeading>        
+      </NavbarGroup>
+      <NavbarGroup align="right" style={{color:"white"}}>
+        <Button className={Classes.MINIMAL} rightIcon="home" style={{color:Colors.WHITE}}>Home</Button>
+        <Button className={Classes.MINIMAL} rightIcon="document" text="Files" style={{color:Colors.WHITE}}/>
+      </NavbarGroup>
+    </Navbar>    
+  );
+}
 
 
 export default Header;
